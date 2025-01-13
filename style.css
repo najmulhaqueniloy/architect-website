@@ -3,6 +3,7 @@
 body{
     font-family: "Work Sans", serif;
     font-optical-sizing: auto;
+    background-color: rgba(9, 5, 252, 0.041);
 }
 
 /* sheared styles */
@@ -28,11 +29,12 @@ body{
 .title{
     font-size: 45px;
     font-weight: bold;
+    color: rgba(19, 19, 19, 1);
 }
 .description{
     font-size: 16px;
     line-height: 26px;
-    color: rgba(19, 19, 19, 1);
+    color: rgba(114, 114, 114, 1);
 }
 .pri-btn{
     background-color: rgba(255, 144, 14, 1);
@@ -102,25 +104,43 @@ main > section{
     width: 100%;
 }
 
-/* Features styles */
-.features{
+/* Team styles */
+.team{
     align-items: center;
     gap: 73px;
     padding: 0 60px;
     
 }
-.features-image{
+.team-image{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
-.features-content{
+.team-content{
     max-width: 535px;
 }
 
 /* Features section styles */
+.feature-area .title{
+    border-left: 5px solid rgba(255, 144, 14, 1);
+    padding-left: 20px;
+}
+.feature-title{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(19, 19, 19, 1);
+}
 
+.feature-area{
+    display: flex;
+    gap: 54px;
+}
+
+.features-card{
+    margin: 30px 0;
+    padding: 30px;
+}
 
 /* Some Facts section styles */
 .facts-title{
@@ -157,10 +177,11 @@ main > section{
 }
 
 /* Footer related styles */
-.footer{
+.footer-content{
     background-color: #FFF4E7;
-    padding: 38px 410px;
-    margin: 130px auto;
+    text-align: center;
+    padding: 38px;
+    margin: 130px 0;
 }
 .footer-text{
     font-size: 20px;
@@ -171,19 +192,19 @@ main > section{
 @media screen and (max-width: 576px) {
     .navbar, 
     .nav-menu,
-    .features{
+    .team{
         flex-direction: column;
     }
-    .features{
+    .team{
         padding: 0 10px;
         gap: 0;
     }
-    .features-image,
+    .team-image,
     .card-area,
     .sponsor-companies{
         grid-template-columns: 1fr;
     }
-    .features-content{
+    .team-content{
         margin: 0 20px;
     }
 
@@ -195,11 +216,11 @@ main > section{
 
 /* Medium size device */
 @media screen and (min-width: 576px) and (max-width: 992px) {
-    .features{
+    .team{
         flex-direction: column;
     }
 
-    .features-content{
+    .team-content{
         margin: 0 auto;
     }
 
