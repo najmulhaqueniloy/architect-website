@@ -15,9 +15,19 @@ body{
 .dark-3{
    color: rgba(114, 114, 114, 1);
 }
+.orange{
+    color: rgba(255, 144, 14, 1);
+}
+.medium{
+    font-weight: 500;
+}
 .display-flex{
     display: flex;
     justify-content: space-between;
+}
+.title{
+    font-size: 45px;
+    font-weight: bold;
 }
 .description{
     font-size: 16px;
@@ -32,7 +42,17 @@ body{
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 32px;
+    margin-top: 30px;
+}
+main, footer{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
+.hide{
+    display: none;
 }
 
 /* Header styles */
@@ -58,10 +78,6 @@ body{
     font-weight: 500;
     color: rgba(66, 66, 66, 1);
 }
-.brand{
-    font-size: 3rem;
-    font-weight: bold;
-}
 .brand-link{
     text-decoration: none;
 }
@@ -81,9 +97,98 @@ body{
     width: 100%;
 }
 
-/* Media Query */
+/* Features styles */
+.features{
+    align-items: center;
+    gap: 73px;
+    padding: 0 60px;
+    
+}
+.features-image{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.features-content{
+    max-width: 535px;
+}
+
+/* Features section styles */
+
+
+/* Some Facts section styles */
+.facts-content{
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.facts-title{
+    font-weight: 600;
+    margin: 10px 0 0 0;
+}
+.facts-info{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.card-area{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    padding: 0 60px;
+}
+.facts-card{
+    border: 1px solid rgba(255, 144, 14, 1);
+    border-radius: 8px;
+    padding: 50px 35px;
+    box-shadow: 2px 2px 5px rgba(255, 143, 14, 0.4), -2px -2px 5px rgba(255, 143, 14, 0.4);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Small size device Media Query */
 @media screen and (max-width: 576px) {
-    .navbar, .nav-menu{
+    .navbar, 
+    .nav-menu,
+    .features{
         flex-direction: column;
+    }
+    .features{
+        padding: 0 10px;
+        gap: 0;
+    }
+    .features-image{
+        grid-template-columns: 1fr;
+    }
+    .features-content{
+        margin: 0 20px;
+    }
+
+
+    .card-area{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 10px;
+    }
+}
+
+/* Medium size device */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .features{
+        flex-direction: column;
+    }
+
+    .features-content{
+        margin: 0 auto;
+    }
+
+
+    .card-area{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 }
